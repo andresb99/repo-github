@@ -10,9 +10,12 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -23,16 +26,107 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="py-2 d-none d-md-inline-block" id="NombreDeUsuario" href="#" ></a>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="my-profile.html">Perfil</a>
+          <a class="dropdown-item" href="login.html" onclick="exit();">Salir</a>
+        </div>
+      </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main role="main">
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <p>
+          <dt>Categoria: <a href="products.html" id="productcategory"></a></dt>
+        </p>
+        <dt>Descripción:</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Cantidad de productos vendidos:</dt>
+        <dd>
+          <b><p id="productsoldCount"></p></b>
+        </dd>
+
+        <dt>Precio:</dt>
+        <dd>
+          <b><p id="productcost"></p></b>
+        </dd>
+
+        <dt><h3><b>Imágenes ilustrativas</b></h3></dt>
+        <dd>
+          <!--<div class="row text-center text-lg-left pt-2" id="productImage">-->
+            <div style="width: 49rem;" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              </ol>
+              <div class="carousel-caption d-none d-md-block">
+                <B><h5 style="color: darkgray;">Chevrolet Onix Joy</h5></B>
+                
+              </div>
+              <div id="productImage" class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="img/prod1.jpg" alt="First slide">
+                </div> 
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </dd>
+        <dt><h3><b>Productos similares</b></h3></dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="relatedProducts">
+
+          </div>
+        </dd>
+      </dl>
+      <div>
+        <h2 class="text-center p-4"><b class="text-muted">Comentarios</b></h2>
+        <p id="comentarios"></p>
+      </div>
+      <div class="comentbox">
+        <form>
+        <!--Estrellitas e input del comentario-->
+          <h3 class="text-muted" > <b>Puntuar producto: </b>
+            <span class="puntuaciones">
+            <a  id="1"><i class="fas fa-star"></i></a>
+            <a  id="2"><i class="fas fa-star"></i></a>
+            <a  id="3"><i class="fas fa-star"></i></a>
+            <a  id="4"><i class="fas fa-star"></i></a>
+            <a  id="5"><i class="fas fa-star"></i></a>
+            <span class="calificacion"></span>
+          </span></h3>
+          <div id="texto">
+            <textarea id="agregarComentario" class="form-control" rows="4" cols="100" placeholder="Escribir un comentario aquí"></textarea>
+          </div>
+         
+          </div>
+        </form>
+        <button onclick="addComentario();" id="botonDeEnviar" style="height: 45px;" type="reset" value="Enviar" class="btn btn-secondary btn-lg">Enviar</button>
+      </div>
     </div>
-  </div>
+  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -40,6 +134,9 @@
       </p>
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver más productos como éste</a>
+      <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
+        seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
     </div>
   </footer>
   <div id="spinner-wrapper">
@@ -56,4 +153,5 @@
   <script src="js/product-info.js"></script>
 </body>
 
+</html>
 </html>

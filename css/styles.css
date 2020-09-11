@@ -12,7 +12,7 @@
   margin-bottom: 0;
   background-color: #53C0FB;
   background: url('../img/cover_back.png');
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   color: black;
@@ -139,3 +139,95 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+#uno {
+  background-image: url(../img/fondo-login.jpg );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed; 
+}
+
+.mostrarContraseñaOjo {
+  transform: translate(350%,-100%);
+   
+}
+.mostrarContraseñaOjo:hover {
+  background-color: lightgray;
+}
+.tituloLogin {
+  color: rgb(216, 4, 107);
+  font: 350% message-box;
+}
+
+.cont{
+  height:100%;
+  padding-top:0px;
+  float:right;
+}
+.cont label{
+  color:#797d7f;
+  font-size:12.9px;
+}
+
+input[type="search"]{
+  width:170px;
+  margin: -5px 5px;
+  padding:10px 16px;
+  border-radius:32px;
+  outline:none;
+  border:2px solid #ccd1d1;
+  background:#aeb6bf;
+  transition:all 0.5s;
+}
+input[type="search"]:focus{
+  background:#fff;
+  width:300px;
+}
+.botonLogin {
+  background-color: #EF3B66;
+  color: white;
+  padding: 4px;
+  margin: 3px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.botonLogin:hover {
+  background-color: #780823;
+}
+
+.comentarios {
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #e6e6e6;
+}
+.comentbox {
+  margin: 1rem;
+  padding: 1rem;
+  transform: translate(-1.5%, -5%);
+
+}
+
+#comentarios {
+  border: 1rem solid white ;
+  background-color: lightgray;
+
+}
+
+
+/* acá empieza el css de las estrellitas */
+.puntuaciones a i {
+  color: grey;
+}
+.puntuaciones a.seleccionado i {
+  color: orange;
+}
+/* acá termina el css de las estrellitas */
+
+#botonDeEnviar {
+  margin-left: 17px;
+  margin-top: -25px;
+}
+
+
+
