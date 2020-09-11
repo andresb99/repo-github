@@ -119,7 +119,6 @@ function addComentario(){
 </div>
 </div>    
 `
-
         document.getElementById("comentarios").innerHTML += htmlContentToAppend;
          
     
