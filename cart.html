@@ -52,14 +52,66 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  
+  <header>
+    <div><H1 class="micompra">MI COMPRA</H1></div>
+  </header>
+  <div class="allcontent">
+  <footer  class="headercarrito">
+    <div class="subtitle"><h2 class="subtitleuno" >RESUMEN DE TU PEDIDO</h2>
+      <div class=" text-muted subtotaluno"><p>Sub Total: <b id="sumadeprecios"></b></p></div>
+      <div class="text-muted subtotal"><p> costo de envio: <span id="costodeenvio"></span></p></div>
+      <div class=" preciototal"><p>TOTAL: <span id="preciototal"></span></p></div></br>
+      <input type="button" class="finalizarcompra" name="FINALIZAR COMPRA" value="FINALIZAR COMPRA"></br></br></br>
+      <form>
+        <h4><p class="subtitlecontact">¡Comunicate con nosotros!</p></h4>
+        <input class="form-control" type="text"  name="ingresa tu nombre" placeholder="ingresa tu nombre" /></br>
+        <input class="form-control" type="text"  name="ingresa tu apellido" placeholder="ingresa tu apellido" /></br>
+        <input class="form-control" type="email"  name="ingresa tu email" placeholder="ingresa tu email" /></br>
+        <input class="form-control" type="tel" name="ingresa tu celular" placeholder="ingresa tu numero de celular" /></br>
+        <textarea class="form-control" rows="4" cols="10" placeholder="Escribir un comentario aquí"></textarea></br>
+        <input class="finalizarcompra" type="submit" name="ingresa tu celular" placeholder="ingresa tu numero de celular" />
+
+      </form>
+    </div>
+    
+    <form>
+      
+      
+      <div class="container">
+       
+        <div class="row">
+          <div class="col-10 contentleftright">
+            
+            <span class="bloque-de-imagen "><img  class="imgcarrito" src="img/tree1.jpg">
+            <b id="articulouno"></b>
+            <p><span id="preciouno" class="precios"></span>
+            <label for="cantidad de unidades" class="text-muted countunity">Cantidad de unidades: <span id="cantidaddeunidadesuno"></span></label>
+            <input id="cantidadarbolito" class="col-2 form-control" style="margin-top: 15px;" type="number" value="2" name="cantidad de unidades" onclick="cambiarCantidad1(),resultado(), resultado2()" placeholder="0"></p>
+          </span>
+            
+   
+            <span class="bloque-de-imagen bloque-de-imagenuno"><img class="imgcarrito" src="img/prod3.jpg">
+            <span id="articulodos"></span>
+            <p><span id="preciodos"  class="precios"></span></p>
+            <label for="cantidad de unidades" class="text-muted countunity">Cantidad de unidades<span class="text-muted " id="cantidaddeunidadesdos"></span></label><input  id="cantidadcelerio" class="inputnumber col-2  form-control" type="number" value="1"  onchange="cambiarCantidad(),resultado(),resultado2()" name="cantidad de unidades" placeholder="0" >
+           
+            
+          </span>
+            <span class="clearfix"></span>
+            
     </div>
   </div>
+  
+</div>
+
+    </form>
+
+  <div>
+  
+  </div>
+</footer>
+</div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>

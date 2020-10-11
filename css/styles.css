@@ -229,5 +229,201 @@ input[type="search"]:focus{
   margin-top: -25px;
 }
 
+.clearfix {
+  overflow: auto;
+}
 
 
+.micompra{
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 1500px;
+}
+
+
+input[type="number"]{
+  width: 85px;
+}
+
+.bloque-de-imagen{
+  width: 700px;
+  display: inline-block;
+  margin-left: 15px ;
+  padding: 40px;
+  border-bottom: 1px solid #ccc;
+  
+}
+
+
+.bloque-de-imagenuno{
+  line-height: 100px;
+}
+
+
+.imgcarrito{
+  
+  margin-left: 0px;
+  width: 15rem;
+  float: left;
+}
+
+.modificaruno{
+  transform: translate(85%, -110%);
+  display: block;
+}
+.inputnumber{
+  transform: translate(280%, -155%);
+}
+
+.headercarrito{
+  float: left;
+}
+
+.btn-modificar{
+  transform: translate(295%, -243%);
+  display: block;
+}
+
+
+.btn-modificar, .modificaruno {
+    color: #ffffff;
+    background:#0074bd;
+    
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: none;
+    text-decoration: none;
+    line-height: 35px;
+    box-shadow: 0px 0px 5px rgb(88, 88, 88);
+    border-radius: 4px;
+}
+
+.btn-modificar:hover, .modificaruno:hover, .finalizarcompra:hover {
+background: rgb(37, 37, 37) ;
+color:white;
+transition: 300ms all;}
+
+.subtitle{
+  
+  float: right;
+  border: 1px solid #ccc;
+  margin-right: -75px;
+  margin-top: -8px ;
+  border-radius: 4px;
+  padding: 10px;
+  text-transform: uppercase;
+  
+}
+
+.subtitleuno{
+  
+  background-color: #0074bd;
+  line-height: 20px;
+  color: #ffffff;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-top: 23px;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgb(88, 88, 88);
+}
+ 
+.subtotaluno, .subtotal{
+
+  margin-left: 11px;
+}
+
+#cantidaddeunidadesuno, #cantidaddeunidadesdos{
+  font-size: 25px;
+}
+
+.subtotal{
+  border-bottom: 1px solid #ccc;
+}
+
+#articulouno, #articulodos{
+  color: #0074bd;
+}
+
+#articulouno:hover, #articulodos:hover{
+  color: #444;
+  transition: 500ms all;
+  cursor:pointer;
+}
+
+.preciototal{
+  text-align: center;
+  color: #d7292b;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+
+  margin-top: 15px;
+  
+}
+
+.precios{
+  color: #d7292b;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700px;
+  text-transform: uppercase;
+
+}
+
+.countunity{
+  
+  text-transform: uppercase;
+
+}
+
+.countunity{
+  transform: translate(0% , -50%);
+  text-transform: uppercase;
+
+}
+
+.finalizarcompra{
+  color: #ffffff;
+  text-align: center;
+  background-color: #0074bd;
+  width: 95%;
+  height: 58px;
+  margin-left: 10px;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-shadow: none;
+  text-decoration: none;
+  line-height: 35px;
+  box-shadow: 0px 0px 5px rgb(88, 88, 88);
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600px;
+  
+  
+}
+
+.subtitlecontact{
+  text-align: center;
+}
+
+@media(min-width:1300px){
+  .allcontent{
+    display: table;  
+    text-align: left;
+    margin: 0px auto;
+    overflow: auto;
+    transform: translate(-15%, 0%);
+    
+  }
+  .inputnumber{
+      transform: translate( 290%, -157%);
+  }
+  
+
+}
