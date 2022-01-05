@@ -30,18 +30,20 @@
   </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/estiloscarritoejemplo.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
+  <nav class="site-header sticky-top py-1 navclass">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <a class="py-2 d-none d-md-inline-block" href="contact.html">Contactanos</a>
       <div class="dropdown">
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-secondary btn-sm dropdown-toggle dropdownclass"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <a class="py-2 d-none d-md-inline-block" id="NombreDeUsuario" href="#" ></a>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -51,66 +53,106 @@
         </div>
       </div>
     </div>
+    
   </nav>
   
-  <header>
-    <div><H1 class="micompra">MI COMPRA</H1></div>
-  </header>
-  <div class="allcontent">
-  <footer  class="headercarrito">
-    <div class="subtitle"><h2 class="subtitleuno" >RESUMEN DE TU PEDIDO</h2>
-      <div class=" text-muted subtotaluno"><p>Sub Total: <b id="sumadeprecios"></b></p></div>
-      <div class="text-muted subtotal"><p> costo de envio: <span id="costodeenvio"></span></p></div>
-      <div class=" preciototal"><p>TOTAL: <span id="preciototal"></span></p></div></br>
-      <input type="button" class="finalizarcompra" name="FINALIZAR COMPRA" value="FINALIZAR COMPRA"></br></br></br>
-      <form>
-        <h4><p class="subtitlecontact">¡Comunicate con nosotros!</p></h4>
-        <input class="form-control" type="text"  name="ingresa tu nombre" placeholder="ingresa tu nombre" /></br>
-        <input class="form-control" type="text"  name="ingresa tu apellido" placeholder="ingresa tu apellido" /></br>
-        <input class="form-control" type="email"  name="ingresa tu email" placeholder="ingresa tu email" /></br>
-        <input class="form-control" type="tel" name="ingresa tu celular" placeholder="ingresa tu numero de celular" /></br>
-        <textarea class="form-control" rows="4" cols="10" placeholder="Escribir un comentario aquí"></textarea></br>
-        <input class="finalizarcompra" type="submit" name="ingresa tu celular" placeholder="ingresa tu numero de celular" />
+  <h1 class="headercart">Mi carrito</h1>
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              
+          </div>
+          <div class="col-8">
+              <section >
+                <article id="articleone"  class="articles articleone">
+                    <img class="imgone " src="img/tree1.jpg" alt="pino de olor">
+                    <table style="display: inline-block;" >
+                        <tr>
+                            <td id="articulouno"></td> 
+                            
+                            <td  id="preciouno"></td> 
 
-      </form>
-    </div>
+                        </tr>
+                        <tr>
+                            <td class="text-muted" style="font-family: serif;">
+                                <h5>Precio: $U 100</h5>
+                            </td>
+
+                            <td>
+                                <button class="btnBorrarone"  onclick="borrarArbolito()"><img width="30px" height="30px" src="img/cross.png" alt="borrar"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="cantidad de unidades" class="text-muted">Unidades:<span id="cantidaddeunidadesuno"></span></label>
+                                <input id="cantidadarbolito" min="0" type="number" value="2" name="cantidad de unidades" onclick="cambiarCantidad1(),resultado(), resultado2()" placeholder="0"></p>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </article>
+
+                <article id="articletwo" class="articles articletwo">
+                    <img class="imgtwo" src="img/prod3.jpg" alt="suzuki celerio">
+                       
+                        <table style="display: inline-block;" >
+                            <tr>
+                                <td  id="articulodos"></td> 
+                                
+                                <td  id="preciodos"></td> 
     
-    <form>
-      
-      
-      <div class="container">
-       
-        <div class="row">
-          <div class="col-10 contentleftright">
-            
-            <span class="bloque-de-imagen "><img  class="imgcarrito" src="img/tree1.jpg">
-            <b id="articulouno"></b>
-            <p><span id="preciouno" class="precios"></span>
-            <label for="cantidad de unidades" class="text-muted countunity">Cantidad de unidades: <span id="cantidaddeunidadesuno"></span></label>
-            <input id="cantidadarbolito" class="col-2 form-control" style="margin-top: 15px;" type="number" value="2" name="cantidad de unidades" onclick="cambiarCantidad1(),resultado(), resultado2()" placeholder="0"></p>
-          </span>
-            
-   
-            <span class="bloque-de-imagen bloque-de-imagenuno"><img class="imgcarrito" src="img/prod3.jpg">
-            <span id="articulodos"></span>
-            <p><span id="preciodos"  class="precios"></span></p>
-            <label for="cantidad de unidades" class="text-muted countunity">Cantidad de unidades<span class="text-muted " id="cantidaddeunidadesdos"></span></label><input  id="cantidadcelerio" class="inputnumber col-2  form-control" type="number" value="1"  onchange="cambiarCantidad(),resultado(),resultado2()" name="cantidad de unidades" placeholder="0" >
-           
-            
-          </span>
-            <span class="clearfix"></span>
-            
-    </div>
-  </div>
-  
-</div>
+                            </tr>
+                            <tr>
+                                <td class="text-muted" style="font-family: serif;">
+                                    <h5 >Precio: $USD 12500</h5>
+                                </td>
+    
+                                <td>
+                                    <button class="btnBorrartwo"  onclick="borrarAuto()"><img width="30px" height="30px" src="img/cross.png" alt="borrar"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="cantidad de unidades" class="text-muted">Unidades: <span class="text-muted " id="cantidaddeunidadesdos"></span></label><input  id="cantidadcelerio"  type="number" value="1" min="0"  onchange="cambiarCantidad(),resultado(),resultado2()" name="cantidad de unidades" placeholder="0" ></p>
+                                </td>
+                            </tr>
+    
+                        </table>
+    
+                </article>
+              </section>
+          </div>
 
-    </form>
+          <div class="col-4">
+            <aside class="asidecart">
+                <h3 class="asideslider">Resumen del pedido</h3>
+                <p>
+                    <div style="font-family: serif;" class=" text-muted subtotaluno">
+                        <p>Sub Total: <span id="sumadeprecios"></span></p>
+                    </div>
+                </p>
 
-  <div>
-  
+                <p>
+                    <div class="text-muted subtotal">
+                        <p>Seleccione un metodo de envio: </p>
+                        <p>
+                        <form name="submissionform">
+                          <input type="radio" name="inputenvio" id="enviopremium" onclick="resultado2()" value="15"> <label for="premium"><b>Premium </b>(2-5 días)</label></p>
+                          <p><input type="radio" id="envioexpress" name="inputenvio" onclick="resultado2()" value="7"> <label for="express"><b>Express </b>(5-8 días)</label></p>
+                          <p><input type="radio" id="enviostandard" name="inputenvio" onclick="resultado2()" value="5"> <label for="standard"><b>Standard </b>(12-15 días)</label></p></div>
+                        </form>
+                      <div class=" preciototal"><p>Total: <span id="preciototal"></span></p></div></br>
+                      <button type="button" style="margin-bottom: 10px; margin-top: -10px;" class="finalizarcompra" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" onclick="validation()">COMPRAR</button>
+                        <span id="modal"></span>
+                    </p>
+            </aside>
+          </div>
+
+      </div>
+
   </div>
-</footer>
+
 </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
@@ -120,6 +162,7 @@
       <div></div>
     </div>
   </div>
+  
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>

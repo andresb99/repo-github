@@ -18,6 +18,9 @@
   color: black;
   font-weight: bold;
 }
+#bloqueuno{
+  border-top: 1px solid #ccc;
+}
 
 @media (min-width: 768px) {
   .jumbotron {
@@ -169,6 +172,8 @@ a.custom-card:hover {
   font-size:12.9px;
 }
 
+
+
 input[type="search"]{
   width:170px;
   margin: -5px 5px;
@@ -190,9 +195,15 @@ input[type="search"]:focus{
   margin: 3px;
   font-family: sans-serif;
   font-weight: bold;
+  border: none;
+  border-radius: 5px;
 }
 .botonLogin:hover {
   background-color: #780823;
+  transition: 350ms;
+  -webkit-box-shadow: 10px 10px 42px -5px rgba(0,0,0,0.51);
+  -moz-box-shadow: 10px 10px 42px -5px rgba(0,0,0,0.51);
+  box-shadow: 10px 10px 42px -5px rgba(0,0,0,0.51);
 }
 
 .comentarios {
@@ -234,104 +245,12 @@ input[type="search"]:focus{
 }
 
 
-.micompra{
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 1500px;
-}
-
-
-input[type="number"]{
-  width: 85px;
-}
-
-.bloque-de-imagen{
-  width: 700px;
-  display: inline-block;
-  margin-left: 15px ;
-  padding: 40px;
-  border-bottom: 1px solid #ccc;
-  
-}
-
-
-.bloque-de-imagenuno{
-  line-height: 100px;
-}
-
-
-.imgcarrito{
-  
-  margin-left: 0px;
-  width: 15rem;
-  float: left;
-}
-
-.modificaruno{
-  transform: translate(85%, -110%);
-  display: block;
-}
-.inputnumber{
-  transform: translate(280%, -155%);
-}
-
-.headercarrito{
-  float: left;
-}
-
-.btn-modificar{
-  transform: translate(295%, -243%);
-  display: block;
-}
-
-
-.btn-modificar, .modificaruno {
-    color: #ffffff;
-    background:#0074bd;
-    
-    font-size: 18px;
-    text-transform: uppercase;
-    text-shadow: none;
-    text-decoration: none;
-    line-height: 35px;
-    box-shadow: 0px 0px 5px rgb(88, 88, 88);
-    border-radius: 4px;
-}
-
-.btn-modificar:hover, .modificaruno:hover, .finalizarcompra:hover {
+.btn-modificar:hover, .modificaruno:hover{
 background: rgb(37, 37, 37) ;
 color:white;
 transition: 300ms all;}
 
-.subtitle{
-  
-  float: right;
-  border: 1px solid #ccc;
-  margin-right: -75px;
-  margin-top: -8px ;
-  border-radius: 4px;
-  padding: 10px;
-  text-transform: uppercase;
-  
-}
 
-.subtitleuno{
-  
-  background-color: #0074bd;
-  line-height: 20px;
-  color: #ffffff;
-  border-radius: 4px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
-  padding-top: 23px;
-  font-family: "Open Sans", sans-serif;
-  margin: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  box-shadow: 0px 0px 5px rgb(88, 88, 88);
-}
  
 .subtotaluno, .subtotal{
 
@@ -346,57 +265,24 @@ transition: 300ms all;}
   border-bottom: 1px solid #ccc;
 }
 
-#articulouno, #articulodos{
-  color: #0074bd;
-}
+
 
 #articulouno:hover, #articulodos:hover{
-  color: #444;
-  transition: 500ms all;
+  color: rgb(155, 155, 155);
+  transition: 300ms all;
   cursor:pointer;
 }
 
-.preciototal{
-  text-align: center;
-  color: #d7292b;
-  font-size: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-
-  margin-top: 15px;
-  
-}
-
-.precios{
-  color: #d7292b;
-  font-size: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700px;
-  text-transform: uppercase;
-
-}
-
-.countunity{
-  
-  text-transform: uppercase;
-
-}
-
-.countunity{
-  transform: translate(0% , -50%);
-  text-transform: uppercase;
-
-}
 
 .finalizarcompra{
   color: #ffffff;
   text-align: center;
-  background-color: #0074bd;
+  background-color: rgb(24, 24, 24);
   width: 95%;
   height: 58px;
   margin-left: 10px;
   font-size: 17px;
-  text-transform: uppercase;
+  opacity: .5;
   text-shadow: none;
   text-decoration: none;
   line-height: 35px;
@@ -405,7 +291,11 @@ transition: 300ms all;}
   font-family: "Open Sans", sans-serif;
   font-weight: 600px;
   
-  
+}
+
+.finalizarcompra:hover {
+  background-color: black;
+  transition: 300ms;
 }
 
 .subtitlecontact{
@@ -415,15 +305,184 @@ transition: 300ms all;}
 @media(min-width:1300px){
   .allcontent{
     display: table;  
-    text-align: left;
     margin: 0px auto;
     overflow: auto;
-    transform: translate(-15%, 0%);
+    
     
   }
-  .inputnumber{
-      transform: translate( 290%, -157%);
-  }
-  
+ 
 
 }
+
+.imgone{
+  height: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+  
+}
+
+
+
+.imgtwo{
+  height: 100px;
+  text-align: center;
+  margin-bottom: 160px;
+}
+
+.articleone{
+  border-top: 1px solid #ccc;
+}
+
+.articles {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      text-align: left;
+      height: 200px;
+      margin: 10px;
+      margin-top: 55px;
+      
+}
+
+#articulouno, #articulodos{
+  color: rgb(56, 55, 55);
+  opacity: 0.8;
+  
+}
+
+.headercart{
+  text-align: left;
+  color: #fff;
+  opacity: .8;
+  margin-bottom: 55px;
+  padding: 10px;
+  padding-left: 100px;
+  background-color: rgb(1, 148, 148);
+}
+
+
+#cantidadarbolito, #cantidadcelerio{
+  width: 40px;
+  margin-left: 10px;
+}
+
+#preciouno{
+  width: 220px; 
+  text-align: right;
+  font-family:  serif ;
+  color: rgb(56, 55, 55);
+  opacity: 0.8;
+  
+}
+
+#preciodos{
+  width: 370px;
+  text-align: right;
+  font-family: serif;
+  color: rgb(56, 55, 55);
+  opacity: 0.8;
+  
+}
+
+.btnBorrarone{
+  margin-left: 150px;
+  text-decoration: none;
+  background-color: white ;
+  border: none;
+  outline: none;
+  display: block;
+  border-bottom: 1px solid #ccc;
+
+  
+}
+
+.btnBorrartwo{
+  margin-left: 300px;
+  text-decoration: none;
+  background-color: white ;
+  border: none;
+  outline: none;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+
+.asidecart{
+  
+  margin-top: 10px;
+  height: 500px;
+}
+
+.asideslider{
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 13px;
+  margin-top: 0px;
+  color: rgb(24, 24, 24);
+  opacity: .8;
+  font-weight: bold;
+}
+
+.articletwo{
+  margin-top: -8px;
+}
+
+.navclass{
+  background-color: black;
+}
+
+#navclass a{
+  text-decoration: none;
+  color: #fff;
+  border: none;
+}
+
+.navclass a:hover{
+  color: #ccc;
+  transition: 300ms all;
+  text-decoration: none;
+
+}
+
+.dropdownclass{
+  background-color: black;
+  text-decoration: none;
+ border: none;
+}
+
+.dropdownmenuclass{
+  background: #ccc;
+}
+
+.dropdownclass:hover {
+  background-color: black;
+  text-decoration: none;
+  
+}
+
+.margincartdescription{
+  margin-left: 20px;
+}
+
+.preciototal{
+  
+  text-align: center;
+  color: rgb(56, 55, 55);
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-top: 15px;
+  
+}
+
+
+#avatarimage{
+  width: auto; 
+  height: 255px;
+  margin-bottom: 20px;
+}
+
+
+

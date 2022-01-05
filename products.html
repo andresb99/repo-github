@@ -14,14 +14,15 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="site-header sticky-top py-1 bg-dark">
+    <nav class="site-header sticky-top py-1 navclass">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+        <a class="py-2 d-none d-md-inline-block" href="contact.html">Contactanos</a>
         <div class="dropdown">
-          <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-secondary btn-sm dropdown-toggle dropdownclass"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <a class="py-2 d-none d-md-inline-block" id="NombreDeUsuario" href="#" ></a>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -31,6 +32,7 @@
           </div>
         </div>
       </div>
+      
     </nav>
     <div class="text-center p-4">
       <h2>Productos</h2>
@@ -38,8 +40,37 @@
   </div>
     <div class="container">
       <div class="row">
-          <div class="col text-right">
-            
+        
+          <div style="display: inline-grid;" class="col-md">
+            <div class="row justify-content-end">
+              
+              <div class="col-md-6 col-sm-12 mb-1 container">
+                <div class="row container p-0 m-0">
+                  
+                  <div class="col">
+                    <p class="font-weight-normal text-right my-2">Precio.</p>
+                  </div>
+                  
+                  <div class="col">
+                    <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+                  </div>
+                  
+                  <div class="col">
+                    <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+                  </div>
+                  
+                  <div class="col-3 p-0">
+                    <div class="btn-group" role="group">
+                      <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                      <button class="btn btn-link btn-light btn-sm" id="clearRangeFilter">Limpiar</button>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+                
+              </div>
+          </div>
               <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
                 <div>
                   <input id="buscar"  type="search" placeholder="Buscar aquí" />
@@ -62,34 +93,12 @@
               </div>
           </div>
       </div>
-      
-      <div class="row justify-content-end">
-        <div class="col-md-6"></div>
-          <div class="col-md-6 col-sm-12 mb-1 container">
-            <div class="row container p-0 m-0">
-              <div class="col">
-                <p class="font-weight-normal text-right my-2">Precio.</p>
-              </div>
-              <div class="col">
-                <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
-              </div>
-              <div class="col">
-                <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
-              </div>
-              <div class="col-3 p-0">
-                <div class="btn-group" role="group">
-                  <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
-                  <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="list-group" id="cat-list-container">
-          </div>
-      </div>
+
   </div>
+  <div class="container" >
+    <div id="cat-list-container"  class="row">
+    </div>
+    </div>
     <footer class="text-muted bg-light">
       <div class="container">
         <p class="float-right">

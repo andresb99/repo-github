@@ -67,21 +67,25 @@ function showProductsList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))){
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ product.name +`</h4>
-                            <small class="text-muted">` + product.soldCount + ` artículos</small>
+            
+            <div class="col-md-3 ">
+                    <div class="card-deck">
+                        <div class="card mb-4" >
+                            <div >
+                            <a href="product-info.html"  class="list-group-item list-group-item-action">
+                            <img class="card-img-top" src="` + product.imgSrc + `" alt="Card image cap">
+                            <div class="card-body" >
+                                <h5 class="card-title">`+ product.name + `</h5>
+                                <p class="card-text">` + product.description + `</p>
+                                <p class="card-text">`+ "Vendidos:" + product.soldCount + `</p>
+                                <h3 class="text-muted"><b>` + "USD" + product.cost + `</b></h3>
+                            </div>
+                            </a>
+                            </div>
                         </div>
-                        <h3 class="text-muted"><b>` +"US$ "+ product.cost + `</b></h3>
-                        <p class="mb-1">` + product.description + `</p>
                     </div>
-                </div>
-            </a>
+                
+            </div>
             `
         }
 
@@ -178,21 +182,24 @@ const filtrar = ()=>{
         let nombre = product.name.toLowerCase();
         if(nombre.indexOf(texto) !== -1){
             RESULTADO_DE_BUSQUEDA += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ product.name +`</h4>
-                            <small class="text-muted">` + product.soldCount + ` artículos</small>
+            <div class="col-md-3" >
+                    <div class="card-deck">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-img-top">
+                            <a href="product-info.html" class="list-group-item list-group-item-action">
+                            <img class="card-img-top" src="` + product.imgSrc + `" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">`+ product.name + `</h5>
+                                <p class="card-text">` + product.description + `</p>
+                                <p class="card-text">`+ "Vendidos:" + product.soldCount + `</p>
+                                <h3 class="text-muted"><b>` + "USD" + product.cost + `</b></h3>
+                            </div>
+                            <a>
+                            </div>
                         </div>
-                        <h3 class="text-muted"><b>` +"US$ "+ product.cost + `</b></h3>
-                        <p class="mb-1">` + product.description + `</p>
                     </div>
-                </div>
-            </a>
+                
+            </div>
             `
         }
 

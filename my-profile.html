@@ -34,14 +34,15 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
+  <nav class="site-header sticky-top py-1 navclass">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <a class="py-2 d-none d-md-inline-block" href="contact.html">Contactanos</a>
       <div class="dropdown">
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-secondary btn-sm dropdown-toggle dropdownclass"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <a class="py-2 d-none d-md-inline-block" id="NombreDeUsuario" href="#" ></a>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -51,14 +52,28 @@
         </div>
       </div>
     </div>
+    
   </nav>
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+    <div class="row">
+      <div class="col-5 ">
+        <form>
+          <p><input class="form-control" id="profilename" type="text" placeholder="Ingrese sus nombres" name="nombres"></p>
+          <p><input class="form-control" id="profilelastname" type="text" placeholder="Ingrese sus apellidos" name="apellidos"></p>
+          <p><input class="form-control" id="profileage" style="width: 100%;" type="number" placeholder="Ingrese su edad" name="edad"></p>
+          <p><input class="form-control" type="email" id="profileemail" placeholder="Ingrese su email" name="email"></p>
+          <p><input class="form-control" type="number" id="profiletel"  style="width: 100%;" placeholder="Ingrese su telefono o celular" name="telefono"></p>
+          <p><input class="btnborrar" type="button"  value="Guardar" onclick="profileForm(), saveImag()" name="guardar"></p>
+        </form>
+      </div>
+        <div class="col-7">
+          <img id="avatarimage" alt="avatar" src="https://thumbs.dreamstime.com/b/creative-illustration-default-avatar-profile-placeholder-isolated-background-art-design-grey-photo-blank-template-mockup-144855718.jpg">
+          <form>
+            <input  id="avatarinput" type="file"/>
+          </form>
+      </div>
+    </div>    
+    
   </div>
   <footer class="text-muted bg-light">
     <div class="container">
